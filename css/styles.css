@@ -1,15 +1,17 @@
 /* Use the variables */
-* {
-  direction: rtl;
-  margin: 0;
-  padding: 0;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :export {
   bodyBrightBgColor: RGB(237, 241, 247);
   elBrightBgColor: white;
   bodyDarkBgColor: RGB(73, 102, 122);
   elDarkBgColor: RGB(56, 79, 95);
+}
+
+* {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
 }
 
 body {
@@ -34,6 +36,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,14 +45,6 @@ body {
 #header > div {
   width: 33%;
   height: auto;
-}
-
-.bright-item {
-  background-color: white;
-}
-
-.dark-item {
-  background-color: RGB(56, 79, 95);
 }
 
 #logo-and-menu-button {
@@ -97,6 +92,7 @@ body {
 
 #head-line h3 {
   font-size: 1rem;
+  font-weight: 300;
 }
 
 #part1 {
@@ -114,10 +110,139 @@ body {
 
 #part1 > div {
   width: 30%;
-  height: 11.75rem;
+  height: 11.5rem;
   background-color: white;
   border-radius: 8px;
   margin: 0.5rem;
+  padding: 0.8rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#part1 .bright-item {
+  background-color: white;
+}
+
+#part1 .dark-item {
+  background-color: RGB(56, 79, 95);
+}
+
+#part1 .bright-item-headLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: RGB(34, 43, 69);
+  font-size: 0.8rem;
+  width: 100%;
+  height: 2rem;
+}
+
+#part1 .bright-item-headLine-info-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  background-color: RGB(188, 188, 188);
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+#part1 .bright-item-headLine-info-square {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1.5rem;
+  left: 0;
+  display: none;
+  padding: 1rem;
+  height: auto;
+  width: 16rem;
+  font-size: 0.8rem;
+  background-color: white;
+  color: #333333;
+  z-index: 1;
+  border: 1px solid RGB(179, 179, 181);
+  border-radius: 5px;
+}
+
+#part1 .part1-bright-item-main-value {
+  height: 2rem;
+  width: 100%;
+  color: RGB(34, 43, 69);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+#part1 .part1-bright-item-relative-value,
+#part1 .part1-bright-item-total-value {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+#part1 .part1-bright-item-patients-location {
+  width: auto;
+  height: 3rem;
+}
+
+#part1 .part1-bright-item-patients-location {
+  width: 10rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-rows: (1.2rem)[3];
+      grid-template-rows: repeat(3, 1.2rem);
+}
+
+#part1 .part1-bright-item-patients-location .patients-location {
+  font-weight: 400;
+}
+
+#part1 .part1-bright-item-patients-location .patients-number {
+  font-weight: 700;
+}
+
+#part1 .part1-bright-item-critical,
+#part1 .part1-bright-item-mildly {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8rem;
+}
+
+#part1 .red-cyrcle {
+  width: 8px;
+  height: 8px;
+  background-color: RGB(251, 83, 119);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+#part1 .yellow-cyrcle {
+  width: 8px;
+  height: 8px;
+  background-color: RGB(230, 185, 87);
+  border-radius: 50%;
+  margin-left: 0.5rem;
 }
 
 #part2 {
